@@ -1,8 +1,56 @@
-Bubble Sort in Python
+Insertion Sort in Python
+Insertion Sort is a straightforward and more efficient algorithm than the bubble sort.
+It is an in-place and stable algorithm that is more beneficial for nearly-sorted or fewer elements.
+The insertion sort algorithm is not so fast because  it uses nested loop for sort the elements.
 
-Bubble Sort is the simplest sorting algorithm that works by repeatedly
-swapping the adjacent elements if they are in wrong order.
+What is the meaning of in-place and stable?
+    An in-place algorithm is an algorithm that does not need an extra space and produces an output in
+     the same memory that contains the data by transforming the input ‘in-place’.However, a small
+     constant extra space used for variables is allowed
 
-Optimized Implementation:
-The bubbleSort function in bubbleSort.py always runs O(n^2) time even if the array is sorted.
-It can be optimized by stopping the algorithm if inner loop didn’t cause any swap.
+    A stable sorting algorithm is the one that sorts the identical elements in their same order as
+    they appear in the input,whilst unstable sorting may not satisfy the case.
+
+To sort the array using insertion sort below is the algorithm of insertion sort.
+    Spilt a list in two parts - sorted and unsorted.
+    Iterate from arr[1] to arr[n] over the given array.
+    Compare the current element to the next element.
+    If the current element is smaller than the next element,compare to the element before
+    Move to the greater elements one position up to make space for the swapped element.
+
+Let's understand the following example.
+1)We will consider the first element in the sorted array in the following array.
+[10, 4, 25, 1, 5]
+
+2)The first step to add 10 to the sorted subarray
+[10, 4, 25, 1, 5]
+
+3)Now we take the first element from the unsorted array - 4. We store this value in a new variable temp.
+ Now, we can see that the 10>4 then we move the 10 to the right and then overwrite the 4 that was
+ previously stored.
+ [10,10,25,1,5](temp=4)
+
+4)Here the 4 is lesser than all elements in sorted subarray, so we insert it at the first index position.
+ [4, 10, 25, 1, 5]
+
+5)We have two elements in the sorted subarray.
+
+6)Now check the number 25. We have saved it into the temp variable. 25> 10 and also 25> 4 then we put it in
+the third position and add it to the sorted sub array.
+[4, 10, 25, 1, 5]
+
+7)Again we check the number 1. We save it in temp. 1 is less than the 25. It overwrites the 25.
+[4, 10, 25, 25, 5] 10>1 then it overwrites again
+[4, 25, 10, 25, 5]
+[25, 4, 10, 25, 5] 4>1 now put the value of temp = 1
+[1, 4, 10, 25, 5]
+
+8)Now, we have 4 elements in the sorted subarray. 5<25 then shift 25 to the right side and pass
+temp = 5 to the left side.
+[1, 4, 10, 25, 25] put temp = 5
+
+9) Now, we get the sorted array by simply putting the temp value.
+
+[1, 4, 5, 10, 25]
+
+The given array is sorted.
