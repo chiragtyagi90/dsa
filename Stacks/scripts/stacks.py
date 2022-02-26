@@ -1,3 +1,5 @@
+#Implementation of stack using LinkedList inbuilt methods
+
 class StacksUsingArray:
 
     def __init__(self):

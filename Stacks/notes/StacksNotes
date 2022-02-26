@@ -27,7 +27,7 @@ isFull() − check if stack is full.
 isEmpty() − check if stack is empty.
 
 At all times, we maintain a pointer to the last PUSHed data on the stack. As this pointer always represents the top of the stack, hence named top.
- The top pointer provides top value of the stack without actually removing it.
+The top pointer provides top value of the stack without actually removing it.
 
  The functions associated with stack are:
 
@@ -38,9 +38,22 @@ push(a) – Inserts the element ‘a’ at the top of the stack – Time Complex
 pop() – Deletes the topmost element of the stack – Time Complexity: O(1)
 
 Implementation
-There are various ways from which a stack can be implemented in Python. This article covers the implementation of a stack using data structures and modules from the Python library.
+There are various ways from which a stack can be implemented in Python.
 Stack in Python can be implemented using the following ways:
 
 list
 Collections.deque
 queue.LifoQueue
+
+Algorithms of Stacks:
+
+a)Push algorithm to add elements to the stack.
+
+top=-1
+push(s,Max,top,item):
+Step1:if top=Max-1:
+    print("Stack Overflow...Stack is full")
+    return;
+    else
+Step2:top<-top+1
+      s[top]=item
