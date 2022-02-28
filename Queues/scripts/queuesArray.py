@@ -35,12 +35,12 @@ while True:
 5.Enter 5 to see the top element of the queue!
 6.Enter 6 to exit the program!
 """)
-    operation=int(input("Enter your choice:"))
+    operation=input("Enter your choice:")
     print(f"""Operation Selected is {operation}""")
-    if(operation==6):
+    if(operation=="6"):
         break
     else:
-        mydict[str(operation)]()
+        mydict[operation]()
 
 print("Queue Demo Finished")
 
